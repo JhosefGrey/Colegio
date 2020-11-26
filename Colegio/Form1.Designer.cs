@@ -35,11 +35,13 @@ namespace Colegio
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(201, 78);
+            this.button2.Image = global::Colegio.Properties.Resources.teacher;
+            this.button2.Location = new System.Drawing.Point(159, 69);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(153, 85);
+            this.button2.Size = new System.Drawing.Size(234, 115);
             this.button2.TabIndex = 1;
             this.button2.Text = "Maestros";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button2.UseVisualStyleBackColor = true;
             // 
             // label1

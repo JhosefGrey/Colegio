@@ -50,6 +50,7 @@ namespace Colegio.PL
             txtID.Text = dgvMaestros.Rows[indice].Cells[0].Value.ToString();
             txtApellido.Text = dgvMaestros.Rows[indice].Cells[1].Value.ToString();
             txtNombre.Text = dgvMaestros.Rows[indice].Cells[2].Value.ToString();
+            btnAdd.Enabled = false;
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -59,8 +60,7 @@ namespace Colegio.PL
             string caption = "Delete Teacher";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result;
-            result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Error
-                );
+            result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Error);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 oMaestrosDAL.Eliminar(RecuperarInformacion());
@@ -70,6 +70,22 @@ namespace Colegio.PL
             
 
         }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string message = "Do you want to update this teacher ? ";
+            string caption = "Update Teacher";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
+            result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Question);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                oMaestrosDAL.Modificar(RecuperarInformacion());
+                this.LimpiarControles();
+                this.ActualizarDatos();
+            }
+
+        }
+
 
         private void LimpiarControles()
         {
@@ -80,6 +96,12 @@ namespace Colegio.PL
 
         private void ActualizarDatos() {
             dgvMaestros.DataSource = oMaestrosDAL.MostrarMaestros().Tables[0];
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
+            btnAdd.Enabled = true;
         }
     }
 

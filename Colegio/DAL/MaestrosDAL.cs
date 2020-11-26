@@ -26,8 +26,14 @@ namespace Colegio.DAL
         }
 
         public int Eliminar(MaestrosBLL oMaestrosBLL) {
-
             conexion.execSinRetornoDatos("DELETE FROM  tb_maestros WHERE id = "+oMaestrosBLL.ID);
+
+            return 1;
+        }
+
+        public int Modificar(MaestrosBLL oMaestrosBLL)
+        {
+            conexion.execSinRetornoDatos("UPDATE tb_maestros SET apellido = '"+oMaestrosBLL.apellido+"',nombre = '"+oMaestrosBLL.nombre+"' WHERE id = " + oMaestrosBLL.ID);
 
             return 1;
         }
