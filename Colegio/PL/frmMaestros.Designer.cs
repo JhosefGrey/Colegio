@@ -29,18 +29,19 @@ namespace Colegio.PL
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMaestros));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnBorrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.dgvMaestros = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaestros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +49,7 @@ namespace Colegio.PL
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(489, 32);
+            this.label1.Location = new System.Drawing.Point(153, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 0;
@@ -57,7 +58,7 @@ namespace Colegio.PL
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(397, 90);
+            this.label2.Location = new System.Drawing.Point(61, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 1;
@@ -65,78 +66,43 @@ namespace Colegio.PL
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(492, 48);
+            this.txtApellido.Location = new System.Drawing.Point(156, 95);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(267, 20);
             this.txtApellido.TabIndex = 2;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(397, 106);
+            this.txtNombre.Location = new System.Drawing.Point(61, 153);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(362, 20);
             this.txtNombre.TabIndex = 3;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(397, 160);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Agregar";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(492, 160);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 5;
-            this.btnUpdate.Text = "Editar";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.Location = new System.Drawing.Point(591, 160);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(75, 23);
-            this.btnBorrar.TabIndex = 6;
-            this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
-            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
-            // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(684, 160);
+            this.btnCancelar.Image = global::Colegio.Properties.Resources.cancel;
+            this.btnCancelar.Location = new System.Drawing.Point(336, 197);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(87, 33);
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // dgvMaestros
             // 
-            this.dgvMaestros.Location = new System.Drawing.Point(51, 207);
+            this.dgvMaestros.AllowUserToOrderColumns = true;
+            this.dgvMaestros.Location = new System.Drawing.Point(51, 239);
             this.dgvMaestros.Name = "dgvMaestros";
-            this.dgvMaestros.Size = new System.Drawing.Size(708, 194);
+            this.dgvMaestros.Size = new System.Drawing.Size(390, 321);
             this.dgvMaestros.TabIndex = 8;
             this.dgvMaestros.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Seleccionar);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Colegio.Properties.Resources._1200px_Campus_france_svg;
-            this.pictureBox1.Location = new System.Drawing.Point(64, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(310, 151);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(397, 32);
+            this.label3.Location = new System.Drawing.Point(61, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(18, 13);
             this.label3.TabIndex = 10;
@@ -144,16 +110,63 @@ namespace Colegio.PL
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(400, 48);
+            this.txtID.Location = new System.Drawing.Point(64, 95);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(72, 20);
             this.txtID.TabIndex = 11;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Colegio.Properties.Resources._1200px_Campus_france_svg;
+            this.pictureBox1.Location = new System.Drawing.Point(156, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(164, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Image = global::Colegio.Properties.Resources.delete;
+            this.btnBorrar.Location = new System.Drawing.Point(255, 197);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(75, 33);
+            this.btnBorrar.TabIndex = 6;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Image = global::Colegio.Properties.Resources.update;
+            this.btnUpdate.Location = new System.Drawing.Point(156, 197);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(93, 33);
+            this.btnUpdate.TabIndex = 5;
+            this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Image = global::Colegio.Properties.Resources.add;
+            this.btnAdd.Location = new System.Drawing.Point(61, 197);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnAdd.Size = new System.Drawing.Size(89, 33);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Agregar";
+            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // frmMaestros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(488, 586);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
@@ -166,6 +179,7 @@ namespace Colegio.PL
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMaestros";
             this.Text = "frmMaestros";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaestros)).EndInit();

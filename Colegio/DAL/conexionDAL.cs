@@ -19,10 +19,12 @@ namespace Colegio.DAL
             return this.Conexion;
         }
         /*INSERT, DELETE, UPDATE*/
-        public bool execSinRetornoDatos(string strComando) {
+        public bool execSinRetornoDatos(string strComando)
+        {
 
-            try {
-               
+            try
+            {
+
                 SqlCommand Comando = new SqlCommand();
 
                 Comando.CommandText = strComando;
@@ -32,9 +34,36 @@ namespace Colegio.DAL
                 Conexion.Close();
 
                 return true;
-            } catch {
+            }
+            catch
+            {
                 return false;
             }
+        }
+
+        //SOBRE CARGA DEL CONSTRUCTOR
+        public bool execSinRetornoDatos(SqlCommand SQLComando)
+        {
+            try
+            {
+
+                SqlCommand Comando = SQLComando;
+                Comando.Connection = this.EstablecerConexion();
+                Conexion.Open();
+                Comando.ExecuteNonQuery();
+                Conexion.Close();
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool execSinRetornoDatos(string Strings, string Strings2)
+        {
+            return true;
         }
 
         /* SELECT retorno de datos*/
