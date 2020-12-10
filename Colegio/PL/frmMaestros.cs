@@ -91,6 +91,21 @@ namespace Colegio.PL
             }
 
         }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string message = "Do you want to update this teacher ? ";
+            string caption = "Update Teacher";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
+            result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Question);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                oMaestrosDAL.Modificar(RecuperarInformacion());
+                this.LimpiarControles();
+                this.ActualizarDatos();
+            }
+
+        }
 
 
         private void LimpiarControles()
